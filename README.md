@@ -1,123 +1,125 @@
-CivicPulse – Smart City Grievance Management System
+**CivicPulse – Smart City Grievance Management System**
 
 _Frontend Preview: https://jaspal-s-rajput.github.io/CivicPulse_Public_Grievence_System/_
 
-Overview
+_**Overview**_
 
 CivicPulse is a web-based Smart City grievance and feedback management system designed to facilitate structured complaint submission, tracking, and resolution between citizens and municipal authorities. The system supports role-based access and ensures transparency in grievance handling and service-level agreement (SLA) monitoring.
 
-Problem Statement
+_**Problem Statement**_
 
 Municipal grievance handling often lacks transparency, real-time tracking, and accountability. CivicPulse addresses these challenges by providing a centralized digital platform for grievance registration, workflow management, and performance analytics.
 
-System Roles
-Citizen
+_**System Roles**_
+  **Citizen**
 
-Register and authenticate
+    Register and authenticate
 
-Submit grievances with supporting details
+    Submit grievances with supporting details
 
-Track grievance status
+    Track grievance status
 
-Provide feedback after resolution
+    Provide feedback after resolution
 
-Administrator
+**Administrator**
 
-View and manage all grievances
+    View and manage all grievances
+    
+    Assign grievances to departments or officers
+    
+    Set priorities and deadlines
+    
+    Monitor SLA compliance and analytics
 
-Assign grievances to departments or officers
+**Department Officer**
 
-Set priorities and deadlines
+    View assigned grievances
+    
+    Update progress and resolution status
+    
+    Add resolution notes and attachments
 
-Monitor SLA compliance and analytics
+_**Functional Modules**_
 
-Department Officer
+  **1. Authentication and Authorization**
 
-View assigned grievances
+    JWT-based authentication
+    
+    Role-based access control
+    
+    Secure login and registration
 
-Update progress and resolution status
+  **2. Grievance Submission**
 
-Add resolution notes and attachments
+    Category-based grievance creation
+    
+    Image and location support
+    
+    Status tracking (Pending, In Progress, Resolved)
 
-Functional Modules
-1. Authentication and Authorization
+  **3. Grievance Management**
 
-JWT-based authentication
+    Centralized grievance dashboard
+    
+    Assignment to departments or officers
+    
+    Priority and deadline configuration
 
-Role-based access control
+  **4. Officer Workflow**
 
-Secure login and registration
+    View assigned grievances
+    
+    Update grievance progress
+    
+    Submit resolution details
 
-2. Grievance Submission
+  **5. Feedback Management**
 
-Category-based grievance creation
+    Citizen rating after resolution
+    
+    Reopen option for unresolved issues
 
-Image and location support
+  **6. Reporting and Analytics**
 
-Status tracking (Pending, In Progress, Resolved)
+    Category-wise complaint analysis
+    
+    Area-wise complaint distribution
+    
+    SLA performance reports
+    
+    Administrative dashboards
 
-3. Grievance Management
+_**Technology Stack**_
+  **Frontend**
 
-Centralized grievance dashboard
+    React (Vite)
+    
+    REST API integration
+    
+    Chart-based data visualization
 
-Assignment to departments or officers
+  **Backend**
 
-Priority and deadline configuration
+    Spring Boot
+    
+    Spring Security
+    
+    JWT Authentication
+    
+    RESTful services
 
-4. Officer Workflow
+  **Database**
 
-View assigned grievances
+    MySQL
+    
+    JPA / Hibernate
 
-Update grievance progress
+ _**Tools**_
+  
+    STS
+    
+    Maven
+    
+    Postman
 
-Submit resolution details
-
-5. Feedback Management
-
-Citizen rating after resolution
-
-Reopen option for unresolved issues
-
-6. Reporting and Analytics
-
-Category-wise complaint analysis
-
-Area-wise complaint distribution
-
-SLA performance reports
-
-Administrative dashboards
-
-Technology Stack
-Frontend
-
-React (Vite) / Angular
-
-REST API integration
-
-Chart-based data visualization
-
-Backend
-
-Spring Boot
-
-Spring Security
-
-JWT Authentication
-
-RESTful services
-
-Database
-
-MySQL
-
-JPA / Hibernate
-
-Tools
-STS
-
-Git and GitHub
-
-Maven
-
-Postman
+    Git and GitHub   write a pro[per professional readme
