@@ -2,16 +2,17 @@
 
 _Frontend Preview: https://jaspal-s-rajput.github.io/CivicPulse_Public_Grievence_System/_
 
-_**Overview**_
+**Overview**
 
 CivicPulse is a web-based Smart City grievance and feedback management system designed to facilitate structured complaint submission, tracking, and resolution between citizens and municipal authorities. The system supports role-based access and ensures transparency in grievance handling and service-level agreement (SLA) monitoring.
 
-_**Problem Statement**_
+**Problem Statement**
 
 Municipal grievance handling often lacks transparency, real-time tracking, and accountability. CivicPulse addresses these challenges by providing a centralized digital platform for grievance registration, workflow management, and performance analytics.
 
-_**System Roles**_
-  **Citizen**
+**◻️ System Roles**
+
+  _**1. Citizen**_
 
     Register and authenticate
 
@@ -21,7 +22,7 @@ _**System Roles**_
 
     Provide feedback after resolution
 
-**Administrator**
+_**2. Administrator**_
 
     View and manage all grievances
     
@@ -31,7 +32,7 @@ _**System Roles**_
     
     Monitor SLA compliance and analytics
 
-**Department Officer**
+_**3. Department Officer**_
 
     View assigned grievances
     
@@ -39,9 +40,9 @@ _**System Roles**_
     
     Add resolution notes and attachments
 
-_**Functional Modules**_
+**◻️ Functional Modules**
 
-  **1. Authentication and Authorization**
+  _**1. Authentication and Authorization**_
 
     JWT-based authentication
     
@@ -49,7 +50,7 @@ _**Functional Modules**_
     
     Secure login and registration
 
-  **2. Grievance Submission**
+  _**2. Grievance Submission**_
 
     Category-based grievance creation
     
@@ -57,7 +58,7 @@ _**Functional Modules**_
     
     Status tracking (Pending, In Progress, Resolved)
 
-  **3. Grievance Management**
+  _**3. Grievance Management**_
 
     Centralized grievance dashboard
     
@@ -65,7 +66,7 @@ _**Functional Modules**_
     
     Priority and deadline configuration
 
-  **4. Officer Workflow**
+  _**4. Officer Workflow**_
 
     View assigned grievances
     
@@ -73,13 +74,13 @@ _**Functional Modules**_
     
     Submit resolution details
 
-  **5. Feedback Management**
+  _**5. Feedback Management**_
 
     Citizen rating after resolution
     
     Reopen option for unresolved issues
 
-  **6. Reporting and Analytics**
+  _**6. Reporting and Analytics**_
 
     Category-wise complaint analysis
     
@@ -89,8 +90,9 @@ _**Functional Modules**_
     
     Administrative dashboards
 
-_**Technology Stack**_
-  **Frontend**
+**◻️ Technology Stack**
+
+  _**1. Frontend**_
 
     React (Vite)
     
@@ -98,7 +100,7 @@ _**Technology Stack**_
     
     Chart-based data visualization
 
-  **Backend**
+  _**2. Backend**_
 
     Spring Boot
     
@@ -108,13 +110,13 @@ _**Technology Stack**_
     
     RESTful services
 
-  **Database**
+  _**3. Database**_
 
     MySQL
     
     JPA / Hibernate
 
- _**Tools**_
+ **◻️ Tools**
   
     STS
     
@@ -124,6 +126,8 @@ _**Technology Stack**_
 
     Git and GitHub  
 
- **Author & Creator**
+ **◻️ Author & Creator**
+ 
  _Created by — **Jaspal Singh Rajput**
+ 
  CivicPulse — **Smart City Grievance Management System**_
