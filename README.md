@@ -2,11 +2,11 @@
 
 _Frontend Preview: https://jaspal-s-rajput.github.io/CivicPulse_Public_Grievence_System/_
 
-**Overview**
+**◻️ Overview**
 
 CivicPulse is a web-based Smart City grievance and feedback management system designed to facilitate structured complaint submission, tracking, and resolution between citizens and municipal authorities. The system supports role-based access and ensures transparency in grievance handling and service-level agreement (SLA) monitoring.
 
-**Problem Statement**
+**◻️ Problem Statement**
 
 Municipal grievance handling often lacks transparency, real-time tracking, and accountability. CivicPulse addresses these challenges by providing a centralized digital platform for grievance registration, workflow management, and performance analytics.
 
@@ -128,6 +128,6 @@ _**3. Department Officer**_
 
  **◻️ Author & Creator**
  
- _Created by — **Jaspal Singh Rajput**
+ _Created by — **Jaspal Singh Rajput**_
  
- CivicPulse — **Smart City Grievance Management System**_
+ _CivicPulse — **Smart City Grievance Management System**_
