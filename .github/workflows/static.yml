@@ -10,6 +10,9 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  FRONTEND_PATH: CivicPulse India/frontend
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -18,7 +21,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -28,15 +31,15 @@ jobs:
           cache: npm
 
       - name: Install & Build frontend
-        working-directory: "CivicPulse India/frontend"
         run: |
+          cd "$FRONTEND_PATH"
           npm ci
           npm run build
 
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "CivicPulse India/frontend/dist"
+          path: "${{ env.FRONTEND_PATH }}/dist"
 
   deploy:
     environment:
