@@ -1,4 +1,4 @@
-name: Deploy Vite frontend to GitHub Pages
+name: CivicPulse India
 
 on:
   push:
@@ -27,8 +27,8 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install dependencies & build
-        working-directory: frontend
+      - name: Install & Build (frontend only)
+        working-directory: "CivicPulse India/frontend"
         run: |
           npm ci
           npm run build
@@ -36,7 +36,7 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: frontend/dist
+          path: "CivicPulse India/frontend/dist"
 
   deploy:
     environment:
