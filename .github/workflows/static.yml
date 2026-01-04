@@ -30,14 +30,14 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        working-directory: "CivicPulse India/frontend"
+        working-directory: CivicPulse_India/frontend
         run: npm install
 
       - name: Build project
-        working-directory: "CivicPulse India/frontend"
+        working-directory: CivicPulse_India/frontend
         run: npm run build
 
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "CivicPulse India/frontend/dist"
+          path: CivicPulse_India/frontend/dist
