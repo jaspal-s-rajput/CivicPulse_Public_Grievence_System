@@ -1,0 +1,469 @@
+/* =====================================================
+   NAVBAR SPACING
+   ===================================================== */
+
+.premium-navbar {
+  margin: 5px 10px;
+  padding: 0.55rem 0.9rem;
+  border-radius: 18px;
+}
+
+/* =====================================================
+   BRAND
+   ===================================================== */
+
+.premium-brand {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.premium-brand:hover {
+  transform: translateY(-1px);
+}
+
+/* =====================================================
+   NAV KEYS – GLOW ONLY ON HOVER
+   ===================================================== */
+
+.nav-glow {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.nav-item {
+  position: relative;
+  padding: 0.4rem 0.55rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: 12px;
+  transition: color 0.25s ease;
+}
+
+/* glow layer (hidden by default) */
+.nav-item::before {
+  content: "";
+  position: absolute;
+  inset: -6px -10px;
+  border-radius: 16px;
+  background:
+    radial-gradient(
+      circle at center,
+      color-mix(in srgb, var(--primary) 22%, transparent),
+      transparent 65%
+    );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* underline */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--primary-strong)
+  );
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+/* hover glow ON */
+.nav-item:hover {
+  color: var(--text-primary);
+}
+
+.nav-item:hover::before {
+  opacity: 1;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* active page (underline only, NO glow) */
+.nav-item.active {
+  color: var(--text-primary);
+}
+
+.nav-item.active::before {
+  opacity: 0;
+}
+
+.nav-item.active::after {
+  width: 100%;
+}
+
+/* =====================================================
+   ACTIONS – NO GLOW (AS REQUESTED)
+   ===================================================== */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+/* auth button stays calm */
+.nav-auth-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border 0.2s ease;
+}
+
+.nav-auth-btn:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 22px
+    color-mix(in srgb, var(--primary) 18%, transparent);
+  transform: translateY(-1px);
+}
+
+/* theme toggle unchanged */
+.nav-theme {
+  padding: 0.45rem 0.65rem;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .nav-glow {
+    display: none;
+  }
+}
+
+
+/* =====================================================
+   CIVICPULSE PREMIUM FOOTER
+   ===================================================== */
+
+.cp-footer {
+  margin-top: 6rem;
+  padding: 4rem clamp(1.5rem, 5vw, 6rem) 2rem;
+  color: var(--text-muted);
+  position: relative;
+}
+
+/* subtle top gradient line */
+.cp-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--accent),
+    var(--primary-strong)
+  );
+  opacity: 0.8;
+}
+
+/* main grid */
+.cp-footer__inner {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* brand section */
+.cp-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cp-footer__logo img {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+}
+
+.cp-footer__desc {
+  margin: 1rem 0 1.25rem;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+.cp-footer__tagline {
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* columns */
+.cp-footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cp-footer__col a,
+.cp-footer__col p {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* hover underline (premium) */
+.cp-footer__col a {
+  position: relative;
+  width: fit-content;
+}
+
+.cp-footer__col a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.25s ease;
+}
+
+.cp-footer__col a:hover::after {
+  width: 100%;
+}
+
+/* bottom bar */
+.cp-footer__bottom {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-soft);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1024px) {
+  .cp-footer__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .cp-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+/* =====================================================
+   CIVICPULSE PREMIUM FOOTER (THEME AWARE)
+   ===================================================== */
+
+.cp-footer {
+  margin-top: 6rem;
+  padding: 4rem clamp(1.5rem, 5vw, 6rem) 2rem;
+  color: var(--text-muted);
+  position: relative;
+
+  /* LIGHT MODE BACKGROUND */
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.65),
+      rgba(255, 255, 255, 0.85)
+    ),
+    radial-gradient(
+      circle at 20% 0%,
+      color-mix(in srgb, var(--primary) 12%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      color-mix(in srgb, var(--accent) 10%, transparent),
+      transparent 65%
+    );
+}
+
+/* TOP ACCENT LINE */
+.cp-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--accent),
+    var(--primary-strong)
+  );
+  opacity: 0.75;
+}
+
+/* DARK MODE OVERRIDE */
+:root.theme-dark .cp-footer {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.55)
+    ),
+    radial-gradient(
+      circle at 20% 0%,
+      color-mix(in srgb, var(--primary) 20%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      color-mix(in srgb, var(--accent) 18%, transparent),
+      transparent 60%
+    );
+}
+
+/* =====================================================
+   FOOTER GRID
+   ===================================================== */
+
+.cp-footer__inner {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* BRAND */
+.cp-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cp-footer__logo img {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+}
+
+.cp-footer__desc {
+  margin: 1rem 0 1.25rem;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+.cp-footer__tagline {
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* MAKE IN INDIA LOGO */
+.cp-footer__makeinindia {
+  margin-top: 1.25rem;
+}
+
+.cp-footer__makeinindia img {
+  height: 42px;
+  opacity: 0.75;
+  filter: grayscale(100%);
+  transition: opacity 0.25s ease;
+}
+
+.cp-footer__makeinindia img:hover {
+  opacity: 0.95;
+}
+
+/* COLUMNS */
+.cp-footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cp-footer__col a,
+.cp-footer__col p {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* LINK HOVER */
+.cp-footer__col a {
+  position: relative;
+  width: fit-content;
+}
+
+.cp-footer__col a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.25s ease;
+}
+
+.cp-footer__col a:hover::after {
+  width: 100%;
+}
+
+/* BOTTOM BAR */
+.cp-footer__bottom {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-soft);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1024px) {
+  .cp-footer__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .cp-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
