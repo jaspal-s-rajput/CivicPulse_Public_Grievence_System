@@ -7,5 +7,5 @@ export default defineConfig({
   define: {
     global: 'window',
   },
-  base: '/CivicPulse_Public_Grievence_System/',   // <-- repo name
+  base: '/CivicPulse_Public_Grievence_System/', // repo name
 })
