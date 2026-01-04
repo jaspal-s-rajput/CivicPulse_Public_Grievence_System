@@ -122,4 +122,8 @@ _**Technology Stack**_
     
     Postman
 
-    Git and GitHub   write a pro[per professional readme
+    Git and GitHub  
+
+ **Author & Creator**
+ _Created by — **Jaspal Singh Rajput**
+ CivicPulse — **Smart City Grievance Management System**_
