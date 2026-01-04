@@ -15,7 +15,7 @@ import ForgotPassword from "./pages/Authentication/ForgotPassword.jsx";
 import PublicLayout from "./pages/Public_pages/PublicLayout.jsx";
 import Home from "./pages/Public_pages/Home.jsx";
 import About from "./pages/Public_pages/About.jsx";
-import FAQ from "./pages/Public_pages/FAQ.jsx";
+import FAQ from "./pages/Public_pages/Faq.jsx";
 import KeepYourselfAware from "./pages/Public_pages/KeepYourselfAware.jsx";
 import MakeInIndia from "./pages/Public_pages/MakeInIndia.jsx";
 
