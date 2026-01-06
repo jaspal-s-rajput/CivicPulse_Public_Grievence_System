@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { Lock, Moon, Sun, User } from "lucide-react";
+import { Lock, Moon, Sun, User, Home } from "lucide-react";
 import logoImg from "../../assets/india-silver-map.png";
-import indiaMapImg from "../../assets/india-silver-map.png"; // 🇮🇳 ADD THIS
+import indiaMapImg from "../../assets/india-silver-map.png";
 import { useThemePreference } from "../../hooks/useThemePreference.js";
 import { citizenLogin, adminLogin, officerLogin } from "../../api/auth.js";
 import { toast } from "react-toastify";
@@ -74,22 +74,35 @@ export default function LoginPage() {
 
   return (
     <div className="page">
+      {/* ================= HEADER ================= */}
       <header className="app-header">
         <div className="logo-group">
           <img src={logoImg} alt="CivicPulse Hub logo" />
           <p className="logo-title">CivicPulse India</p>
         </div>
 
-        <button type="button" className="theme-toggle" onClick={toggleTheme}>
-          {theme === "dark" ? <Sun /> : <Moon />}
-          <span>{theme === "dark" ? "Light mode" : "Dark mode"}</span>
-        </button>
+        {/* HOME + THEME TOGGLE */}
+        <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+          <Link to="/" className="theme-toggle">
+            <Home />
+            <span>Home</span>
+          </Link>
+
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={toggleTheme}
+          >
+            {theme === "dark" ? <Sun /> : <Moon />}
+            <span>{theme === "dark" ? "Light mode" : "Dark mode"}</span>
+          </button>
+        </div>
       </header>
 
+      {/* ================= MAIN ================= */}
       <main className="auth-shell">
-        {/* ================= LEFT SECTION ================= */}
+        {/* LEFT SECTION */}
         <section className="intro-content" style={{ position: "relative" }}>
-          {/* 🇮🇳 INDIA MAP / EMBLEM BACKGROUND */}
           <img
             src={indiaMapImg}
             alt="India Emblem Background"
@@ -107,7 +120,6 @@ export default function LoginPage() {
             }}
           />
 
-          {/* CONTENT ABOVE MAP */}
           <div style={{ position: "relative", zIndex: 1 }}>
             <p className="eyebrow">|| जनसेवा, समाधान, विश्वास ||</p>
             <h2>CivicPulse India</h2>
@@ -115,12 +127,13 @@ export default function LoginPage() {
               Empowering Citizens. Enabling Governance.
             </h3>
             <p>
-              Empowering citizens and authorities to collaborate for faster civic solutions.
+              Empowering citizens and authorities to collaborate for faster
+              civic solutions.
             </p>
           </div>
         </section>
 
-        {/* ================= RIGHT SECTION ================= */}
+        {/* RIGHT SECTION */}
         <section className="form-panel">
           <div className="form-panel__header">
             <div>
