@@ -130,4 +130,4 @@ _**3. Department Officer**_
  
  _Created by — **Jaspal Singh Rajput**_
  
- _CivicPulse — **Smart City Grievance Management System**_
+ _CivicPulse — **Smart City Grievance Management System**_.
